@@ -10,6 +10,10 @@
         padding: 0;
         box-sizing: border-box;
       }
+      button{
+        border: none;
+        cursor: pointer;
+      }
       body{
         font-family: sans-serif;
         line-height: 1.5;
@@ -34,7 +38,44 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1rem;
+        margin-bottom: 5rem;
       }
+      .image-wrap > img {
+    height: 523px;
+    object-fit: cover;
+}
+           .about-wrap {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3rem;
+           }
+           .about-text{
+            font-family: Arial, Helvetica, sans-serif;
+           }
+           .about-btn{
+            padding: .5rem 1.6rem;
+            border: 0;
+            outline: none;
+            border-radius: .4rem;
+            background-color: #071bcded;
+            color: aliceblue;
+           }
+           .container{
+            width: min(1140px, 95%);
+            margin: 0 auto;
+           }
+/* !media query */
+
+
+           @media (max-width:576px){
+            .about-wrap{
+            grid-template-columns: 1fr;
+            }
+            .about-right{
+              order: -1;
+            }
+           }
     </style>
 </head>
 <body>
@@ -42,11 +83,23 @@
 <p>Dream is not what you see in sleep dream is the thing which can not let you sleep</p>
 <div class="image-wrap">
 <img src="img/girl3.jpeg" alt="">
-<img src="img/girl3.jpeg" alt="">
-<img src="img/girl3.jpeg" alt="">
+<img src="img/images (3).jpeg" alt="">
+<img src="img/images (4).jpeg" alt="">
 
 </div>
-
+<!-- !about us page -->
+<div class="about">
+  <div class="container about-wrap">
+    <div class="about-left">
+    <img src="img/girl3.jpeg" alt="" class="about-image">
+    </div>
+    <div class="about-right">
+      <h1>About us</h1>
+      <p class="about-text">Dream is not what you see in sleep dream is the thing which can not let you sleep</p>
+      <button class="about-btn">Read more</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
